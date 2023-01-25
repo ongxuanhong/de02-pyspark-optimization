@@ -94,6 +94,7 @@ services:
       - GRANT_SUDO="yes"
     volumes:
       - ./notebooks:/home/jovyan/work
+      - ./notebooks/spark-defaults.conf:/usr/local/spark/conf/spark-defaults.conf
     ports:
       - "8888:8888"
       - "4040:4040"
