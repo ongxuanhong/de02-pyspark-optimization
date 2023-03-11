@@ -2,13 +2,13 @@ FROM jupyter/all-spark-notebook:python-3.8
 
 USER root 
 
-RUN curl -O https://dlcdn.apache.org/spark/spark-3.3.1/spark-3.3.1-bin-hadoop3.tgz \
-    && tar zxvf spark-3.3.1-bin-hadoop3.tgz \
-    && rm -rf spark-3.3.1-bin-hadoop3.tgz \
-    && mv spark-3.3.1-bin-hadoop3/ /usr/local/ \
+RUN curl -O https://dlcdn.apache.org/spark/spark-3.3.2/spark-3.3.2-bin-hadoop3.tgz \
+    && tar zxvf spark-3.3.2-bin-hadoop3.tgz \
+    && rm -rf spark-3.3.2-bin-hadoop3.tgz \
+    && mv spark-3.3.2-bin-hadoop3/ /usr/local/ \
     && rm -rf /usr/local/spark \
     && rm -rf /usr/local/spark-3.3.0-bin-hadoop3 \
-    && ln -s /usr/local/spark-3.3.1-bin-hadoop3 /usr/local/spark
+    && ln -s /usr/local/spark-3.3.2-bin-hadoop3 /usr/local/spark
 
 RUN curl -O https://repo1.maven.org/maven2/software/amazon/awssdk/s3/2.18.41/s3-2.18.41.jar \
     && curl -O https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk/1.12.367/aws-java-sdk-1.12.367.jar \
